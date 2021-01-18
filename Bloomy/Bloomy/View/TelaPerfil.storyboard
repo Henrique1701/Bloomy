@@ -73,19 +73,19 @@
                                 <rect key="frame" x="18" y="191.5" width="339" height="417.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj1-cD-fkY">
-                                        <rect key="frame" x="0.0" y="0.0" width="339" height="128.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="92"/>
                                         <state key="normal" image="perfil_saude"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-fl-V37">
-                                        <rect key="frame" x="0.0" y="144.5" width="339" height="128.5"/>
+                                        <rect key="frame" x="0.0" y="108" width="339" height="92.5"/>
                                         <state key="normal" image="perfil_lazer"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdu-dr-hBT">
-                                        <rect key="frame" x="0.0" y="289" width="339" height="128.5"/>
+                                        <rect key="frame" x="0.0" y="216.5" width="339" height="92.5"/>
                                         <state key="normal" image="perfil_atencao_plena"/>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vie-FK-jjr">
-                                        <rect key="frame" x="0.0" y="417.5" width="339" height="0.0"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vie-FK-jjr">
+                                        <rect key="frame" x="0.0" y="325" width="339" height="92.5"/>
                                         <state key="normal" image="perfil_pessoas_queridas"/>
                                     </button>
                                 </subviews>
