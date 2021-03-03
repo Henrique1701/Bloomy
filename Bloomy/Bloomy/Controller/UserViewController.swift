@@ -8,14 +8,18 @@
 import UIKit
 
 class UserViewController: UIViewController {
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet var healthButton: UIButton!
     @IBOutlet var leisureButton: UIButton!
     @IBOutlet var mindfulnessButton: UIButton!
     @IBOutlet var lovedsButton: UIButton!
+    @IBOutlet var profileImageButton: UIButton!
+    var imagePicker: ImagePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
 
         self.userNameLabel.text = UserManager.shared.getUserName()
         self.buttonsToShow()
@@ -48,6 +52,10 @@ class UserViewController: UIViewController {
         }
     }
     
+    @IBAction func showImagePicker(_ sender: UIButton) {
+        self.imagePicker.present(from: sender)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? JourneyCollectionViewController
         
@@ -60,5 +68,13 @@ class UserViewController: UIViewController {
         } else if segue.identifier == "lovedsToJourney" {
             destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)!
         }
+    }
+}
+extension UserViewController: ImagePickerDelegate {
+
+    func didSelect(image: UIImage?) {
+        self.profileImage.image = image
+        profileImage.layer.cornerRadius = (profileImage.frame.size.width-10)/2
+        profileImage.clipsToBounds = true
     }
 }

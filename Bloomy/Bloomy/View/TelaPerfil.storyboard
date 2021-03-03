@@ -101,15 +101,22 @@
                                     <segue destination="LCt-ex-JkX" kind="show" id="8Sq-DP-lW8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca Bloom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n1b-ml-mBg">
-                                <rect key="frame" x="105" y="89" width="121.5" height="20.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="vnq-Dm-5Q0">
+                                <rect key="frame" x="13" y="64" width="92" height="77"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzP-h6-8Vk">
+                                <rect key="frame" x="20" y="64" width="77" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="showImagePicker:" destination="XCZ-zc-2Tt" eventType="touchUpInside" id="OHb-WW-Zhd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rebecca Bloom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n1b-ml-mBg">
+                                <rect key="frame" x="113" y="86" width="121.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="vnq-Dm-5Q0">
-                                <rect key="frame" x="13" y="64" width="92" height="77"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ec-G9-za4"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,6 +165,7 @@
                         <outlet property="leisureButton" destination="qTm-fl-V37" id="jdx-Sx-ZX3"/>
                         <outlet property="lovedsButton" destination="vie-FK-jjr" id="Md6-29-zAn"/>
                         <outlet property="mindfulnessButton" destination="Fdu-dr-hBT" id="eId-Na-5vQ"/>
+                        <outlet property="profileImage" destination="vnq-Dm-5Q0" id="IgC-MM-hiq"/>
                         <outlet property="userNameLabel" destination="n1b-ml-mBg" id="tsF-ZG-phX"/>
                     </connections>
                 </viewController>
