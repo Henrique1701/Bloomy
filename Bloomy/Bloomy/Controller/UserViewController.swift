@@ -20,7 +20,7 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
-
+        
         self.userNameLabel.text = UserManager.shared.getUserName()
         self.buttonsToShow()
         self.setupNavigationController()
@@ -71,10 +71,23 @@ class UserViewController: UIViewController {
     }
 }
 extension UserViewController: ImagePickerDelegate {
-
+    
     func didSelect(image: UIImage?) {
         self.profileImage.image = image
-        profileImage.layer.cornerRadius = (profileImage.frame.size.width-10)/2
+        profileImage.layer.cornerRadius = (profileImage.frame.size.width)/2
         profileImage.clipsToBounds = true
+        profileImage.contentMode = .scaleAspectFit
+        profileImage.layoutIfNeeded()
     }
+}
+
+extension UIImageView {
+    public func maskCircle(anyImage: UIImage) {
+        self.contentMode = UIView.ContentMode.scaleAspectFill
+        self.layer.cornerRadius = self.frame.height / 2
+        self.layer.masksToBounds = false
+        self.clipsToBounds = true
+    }
+    
+    
 }
